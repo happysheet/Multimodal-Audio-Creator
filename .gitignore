@@ -4,26 +4,23 @@
 .env.*.local
 
 # Model files (downloaded, very large ~42GB)
-src/models/
+src/models/*
+!src/models/lora/
+src/models/lora/*
+!src/models/lora/vidmuse_full.pt
 *.pth
-*.pt
 *.ckpt
 *.safetensors
 *.bin
 *.h5
 
-# Generated outputs
-output/
-*.wav
-*.mp3
-*.mp4
-*.avi
+# Generated outputs - but keep example outputs
+output/*
+!output/*.mp4
 
-# Training/test data (large files)
-data/
-*.mp4
-*.wav
-*.WAV
+# Training/test data - but keep the data folder
+# (commented out to allow upload)
+# data/
 
 # Python cache
 __pycache__/

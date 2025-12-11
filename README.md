@@ -58,7 +58,7 @@ https://github.com/user-attachments/assets/example.mp4
 
 ### LoRA Fine-tuning Comparison
 
-Fine-tuning VidMuse with LoRA adapters enables style transfer to specific musical genres or aesthetic preferences. The model was trained on 6 video-audio pairs from `data/train` for 1 epoch, then evaluated on 5 test videos from `data/test`.
+Fine-tuning VidMuse with LoRA adapters enables style transfer to specific musical genres or aesthetic preferences. The model was trained on 6 video-audio pairs from `data/train/` for 1 epoch, then evaluated on 5 test videos from `data/test/`.
 
 Below is a comparison between base model output and LoRA-adapted generation on the same video input.
 
@@ -417,7 +417,7 @@ python scripts/train_lora_vidmuse.py \
   --lr 5e-4 \
   --batch-size 1 \
   --grad-accum 1 \
-  --output src/models/lora/vidmuse_lora.pt \
+  --output src/models/lora/vidmuse_full.pt \
   --device cuda
 ```
 
@@ -432,7 +432,7 @@ python scripts/train_lora_vidmuse.py \
 ```bash
 python main.py --mode vidmuse \
   --video_path data/test/1.mp4 \
-  --vidmuse-lora src/models/lora/vidmuse_lora.pt \
+  --vidmuse-lora src/models/lora/vidmuse_full.pt \
   --output_path output/lora_music.wav
 ```
 
@@ -708,6 +708,7 @@ The reranking mechanism uses CLAP (Contrastive Language-Audio Pretraining) to co
 │   │   └── embedding_eval.py     # Evaluation backends
 │   ├── models/                   # Model checkpoints
 │   │   └── lora/                 # Custom LoRA adapters
+│   │       └── vidmuse_full.pt   # Fine-tuned VidMuse LoRA weights (3.7MB)
 │   └── output/                   # Generated outputs
 │
 ├── data/
@@ -720,8 +721,11 @@ The reranking mechanism uses CLAP (Contrastive Language-Audio Pretraining) to co
 │   ├── base.mp4                  # Base model output
 │   └── lora.mp4                  # LoRA-adapted output
 │
-├── output/                       # User outputs
-│   
+├── output/                       # Example generated outputs
+│   ├── auto2_xtts_spk.mp4        # AutoPipeline result: examples/2.mp4 + music + narration
+│   ├── auto4_xtts_spk.mp4        # AutoPipeline result: examples/4.mp4 + music + narration
+│   └── auto6_xtts_spk.mp4        # AutoPipeline result: examples/6.mp4 + music + narration
+│
 └── tests/                        # Unit tests
 ```
 
