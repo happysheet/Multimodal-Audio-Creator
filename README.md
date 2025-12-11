@@ -45,7 +45,8 @@ This project integrates state-of-the-art models for multimodal audio generation,
 
 The AutoPipeline mode processes a video through the complete workflow: visual captioning, music generation, narration synthesis, and intelligent mixing.
 
-https://github.com/user-attachments/assets/example.mp4
+https://github.com/user-attachments/assets/1725da9b-abc1-44b4-8839-00bb08300e02
+
 
 **Pipeline steps:**
 1. Extract visual semantics from video frames using CLIP
@@ -64,11 +65,18 @@ Below is a comparison between base model output and LoRA-adapted generation on t
 
 **Base Model Output:**
 
-https://github.com/user-attachments/assets/base.mp4
+https://github.com/user-attachments/assets/797fb48b-611b-4695-9fd0-822bd89c8b36
+
+
 
 **LoRA-Adapted Output (1 epoch, 6 training pairs):**
 
-https://github.com/user-attachments/assets/lora.mp4
+
+
+https://github.com/user-attachments/assets/38f7ffee-d800-4c1f-be77-db074171e1dc
+
+
+
 
 The LoRA adapter demonstrates improved alignment with the target musical domain, showing that even with limited training data and a single epoch, parameter-efficient fine-tuning can effectively adapt the model's output characteristics.
 
