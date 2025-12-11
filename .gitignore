@@ -1,0 +1,76 @@
+# Environment variables (contains API keys)
+.env
+.env.local
+.env.*.local
+
+# Model files (downloaded, very large ~42GB)
+src/models/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+
+# Generated outputs
+output/
+*.wav
+*.mp3
+*.mp4
+*.avi
+
+# Training/test data (large files)
+data/
+*.mp4
+*.wav
+*.WAV
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+src/logs/
+logs/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

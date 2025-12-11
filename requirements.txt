@@ -1,0 +1,57 @@
+# Core Deep Learning (install PyTorch with CUDA first)
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# Audio Generation and Processing
+audiocraft>=1.2.0,<1.4.0
+soundfile>=0.12.1
+librosa>=0.10.1
+pydub>=0.25.1
+pyloudnorm>=0.1.1
+resampy>=0.4.0
+
+# Video Processing
+av>=10.0.0
+opencv-python>=4.8.1
+decord>=0.6.0
+moviepy==1.0.3
+pillow>=10.1.0
+einops>=0.6.0
+
+# Web UI and API
+fastapi>=0.122.0
+uvicorn>=0.38.0
+gradio>=6.0.0
+
+# LLM and Utilities
+openai>=1.50.0
+python-dotenv>=1.0.0
+huggingface_hub>=0.23.0
+hf_xet>=0.4.1
+requests>=2.31.0
+numpy>=1.24.0,<2.2.0
+scipy>=1.11.0
+tqdm>=4.66.0
+pyyaml>=6.0.1
+omegaconf>=2.3.0
+
+# Text-to-Speech
+pyttsx3>=2.90
+TTS>=0.22.0
+
+# Audio-Visual Alignment and Adapters
+laion-clap>=1.1.4
+peft==0.11.1
+yt-dlp>=2024.10.22
+
+# Optional Evaluation Backends
+muq>=0.0.6
+torchvggish>=0.2.1
+
+# Testing
+pytest>=7.4.0
+
+# Models from Git Repositories
+git+https://github.com/openai/CLIP.git
+git+https://github.com/ZeyueT/VidMuse.git
