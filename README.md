@@ -36,6 +36,7 @@ This project integrates state-of-the-art models for multimodal audio generation,
 - Intelligent audio mixing with sidechain ducking
 - LLM-driven creative audio planning
 - Custom LoRA training for domain-specific music styles
+<img width="2816" height="1536" alt="framework" src="https://github.com/user-attachments/assets/20819551-e8a7-4e2a-bcba-784c00054263" />
 
 ---
 
